@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Recanto_da_natureza.ReservaConfirmada"
+    BackgroundColor="#E8DCCB"
+    Title="Reserva Confirmada">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="20">
+
+            <Label
+                Text="Reserva Confirmada!"
+                FontSize="34"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="Green"/>
+
+            <Border
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 25"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        x:Name="lblQuarto"
+                        FontSize="22"/>
+
+                    <Label
+                        x:Name="lblHospedes"
+                        FontSize="22"/>
+
+                    <Label
+                        x:Name="lblDiarias"
+                        FontSize="22"/>
+
+                    <Label
+                        x:Name="lblPagamento"
+                        FontSize="22"/>
+
+                    <Label
+                        x:Name="lblValor"
+                        FontSize="30"
+                        FontAttributes="Bold"
+                        TextColor="Green"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Button
+                Text="Nova Reserva"
+                Clicked="NovaReserva"/>
+
+            <Button
+                Text="Voltar ao Início"
+                Clicked="VoltarInicio"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

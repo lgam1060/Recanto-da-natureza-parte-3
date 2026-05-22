@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Recanto_da_natureza.ReservaPage"
+    BackgroundColor="#E8DCCB"
+    Title="Reservas">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="20">
+
+            <Label
+                Text="Faça sua Reserva"
+                FontSize="34"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="#4D6B50"/>
+
+            <!-- QUARTO -->
+            <Border
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 25"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Escolha o Chalé"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#4D6B50"/>
+
+                    <Picker
+                        x:Name="pickerQuarto"
+                        Title="Selecione um chalé"
+                        SelectedIndexChanged="AtualizarReserva"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- DATAS -->
+            <Border
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 25"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Datas"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#4D6B50"/>
+
+                    <Label Text="Check-in"/>
+
+                    <DatePicker
+                        x:Name="dtCheckin"
+                        DateSelected="AtualizarReserva"/>
+
+                    <Label Text="Check-out"/>
+
+                    <DatePicker
+                        x:Name="dtCheckout"
+                        DateSelected="AtualizarReserva"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- HÓSPEDES -->
+            <Border
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 25"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Hóspedes"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#4D6B50"/>
+
+                    <Label Text="Adultos"/>
+
+                    <Stepper
+                        x:Name="stepAdultos"
+                        Minimum="1"
+                        Maximum="4"
+                        Increment="1"
+                        Value="1"
+                        ValueChanged="AtualizarReserva"/>
+
+                    <Label
+                        x:Name="lblAdultos"
+                        Text="1 Adulto"/>
+
+                    <Label Text="Crianças"/>
+
+                    <Stepper
+                        x:Name="stepCriancas"
+                        Minimum="0"
+                        Maximum="4"
+                        Increment="1"
+                        Value="0"
+                        ValueChanged="AtualizarReserva"/>
+
+                    <Label
+                        x:Name="lblCriancas"
+                        Text="0 Crianças"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- CUPOM -->
+            <Border
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 25"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Cupom de Desconto"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#4D6B50"/>
+
+                    <Entry
+                        x:Name="txtCupom"
+                        Placeholder="Digite o cupom"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- PAGAMENTO -->
+            <Border
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 25"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Forma de Pagamento"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#4D6B50"/>
+
+                    <Picker
+                        x:Name="pickerPagamento"
+                        Title="Forma de pagamento">
+
+                        <Picker.Items>
+                            <x:String>Pix</x:String>
+                            <x:String>Cartão</x:String>
+                            <x:String>Boleto</x:String>
+                        </Picker.Items>
+
+                    </Picker>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- RESUMO -->
+            <Border
+                BackgroundColor="White"
+                StrokeShape="RoundRectangle 25"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Resumo da Reserva"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#4D6B50"/>
+
+                    <Label
+                        x:Name="lblDiarias"
+                        Text="Diárias: 0"
+                        FontSize="18"/>
+
+                    <Label
+                        x:Name="lblValor"
+                        Text="Valor Total: R$ 0,00"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="Green"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Button
+                Text="Confirmar Reserva"
+                HeightRequest="60"
+                FontSize="20"
+                Clicked="ConfirmarReserva"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

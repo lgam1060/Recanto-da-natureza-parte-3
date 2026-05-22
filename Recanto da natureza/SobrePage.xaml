@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Recanto_da_natureza.SobrePage"
+    BackgroundColor="#E8DCCB"
+    Title="Sobre Nós">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="20">
+
+            <!-- Imagem principal -->
+            <Frame
+                CornerRadius="25"
+                Padding="0"
+                HasShadow="True"
+                IsClippedToBounds="True"
+                BackgroundColor="Transparent">
+
+                <Image
+                    Source="natureza.jpg"
+                    HeightRequest="260"
+                    Aspect="AspectFill"/>
+            </Frame>
+
+            <!-- Título -->
+            <Label
+                Text="Sobre Nós"
+                FontSize="34"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="#355E3B"/>
+
+            <!-- Sobre -->
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="25"
+                Padding="22"
+                HasShadow="True">
+
+                <VerticalStackLayout Spacing="18">
+
+                    <Label
+                        Text="O Recanto da Natureza é uma pousada localizada em Brotas/SP voltada para descanso, conforto e tranquilidade."
+                        FontSize="19"
+                        TextColor="#2F2F2F"
+                        LineBreakMode="WordWrap"/>
+
+                    <Label
+                        Text="Contamos com 8 chalés exclusivos para até 2 hóspedes."
+                        FontSize="19"
+                        TextColor="#2F2F2F"
+                        LineBreakMode="WordWrap"/>
+
+                    <Label
+                        Text="Nosso ambiente é reservado apenas para adultos e jovens acima de 14 anos."
+                        FontSize="19"
+                        TextColor="#2F2F2F"
+                        LineBreakMode="WordWrap"/>
+
+                    <Label
+                        Text="Para manter a tranquilidade da pousada, não permitimos pets."
+                        FontSize="19"
+                        TextColor="#2F2F2F"
+                        LineBreakMode="WordWrap"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <!-- Chalés -->
+            <Frame
+                BackgroundColor="White"
+                CornerRadius="25"
+                Padding="22"
+                HasShadow="True">
+
+                <VerticalStackLayout Spacing="18">
+
+                    <Label
+                        Text="Chalés Disponíveis"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="#355E3B"/>
+
+                    <Label
+                        Text="• Chalé Sky — Vista panorâmica moderna"
+                        FontSize="19"
+                        TextColor="#2F2F2F"/>
+
+                    <Label
+                        Text="• Chalé Wood — Estilo rústico aconchegante"
+                        FontSize="19"
+                        TextColor="#2F2F2F"/>
+
+                    <Label
+                        Text="• Chalé Stone — Design sofisticado natural"
+                        FontSize="19"
+                        TextColor="#2F2F2F"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <!-- Botão -->
+            <Button
+                Text="Contato via WhatsApp"
+                FontSize="20"
+                FontAttributes="Bold"
+                HeightRequest="60"
+                CornerRadius="18"
+                BackgroundColor="#4D6B50"
+                TextColor="White"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

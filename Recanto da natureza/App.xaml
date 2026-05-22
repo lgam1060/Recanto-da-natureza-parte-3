@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Recanto_da_natureza.App">
+
+
+    <!-- Documentação do projeto: DOCUMENTATION/ATIVIDADE_PRATICA_ETAPA3.md -->
+    <Application.Resources>
+
+        <!-- Cores principais do tema (turismo / natureza) -->
+        <Color x:Key="VerdePrincipal">#7BAE7F</Color>
+        <Color x:Key="VerdeEscuro">#4D6B50</Color>
+        <Color x:Key="Bege">#E8DCCB</Color>
+        <Color x:Key="Branco">#FFFFFF</Color>
+        <Color x:Key="CinzaClaro">#F5F5F5</Color>
+
+        <!-- Estilos gerais -->
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource VerdePrincipal}" />
+            <Setter Property="TextColor" Value="{StaticResource Branco}" />
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HeightRequest" Value="55"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="Padding" Value="12,8" />
+            <Setter Property="Shadow">
+                <Setter.Value>
+                    <Shadow Brush="#44000000" Offset="3,3" Radius="6" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="{StaticResource Branco}"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="PlaceholderColor" Value="Gray"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="Margin" Value="0,4" />
+        </Style>
+
+        <!-- Estilos específicos para a tela de reserva e componentes relacionados -->
+        <Style x:Key="FrameCardStyle" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{StaticResource Branco}" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="HasShadow" Value="True" />
+            <Setter Property="Padding" Value="12" />
+            <Setter Property="Margin" Value="8" />
+        </Style>
+
+        <Style x:Key="TitleLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="{StaticResource VerdeEscuro}" />
+        </Style>
+
+        <Style x:Key="NormalLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+
+        <Style TargetType="DatePicker">
+            <Setter Property="BackgroundColor" Value="{StaticResource Branco}" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="Margin" Value="0,4" />
+        </Style>
+
+        <Style TargetType="Picker">
+            <Setter Property="BackgroundColor" Value="{StaticResource Branco}" />
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="Margin" Value="0,4" />
+        </Style>
+
+        <!-- Recursos para a lógica de reserva (nomes de chaves usados no projeto) -->
+        <x:Double x:Key="DefaultCornerRadius">12</x:Double>
+
+    </Application.Resources>
+
+</Application>
