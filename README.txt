@@ -1,4 +1,10 @@
-﻿Relatório da Pesquisa de Hotel/Pousada – Brotas/SP 
+---------------------Como Executar--------------------
+- Visual Studio 2022
+- Workload .NET MAUI instalada
+- .NET 8 SDK
+---------------------------------------------------------
+
+Relatório da Pesquisa de Hotel/Pousada – Brotas/SP 
 
 SENAI 
 Alunos: Luiz Gustavo, João Pedro, Felipe Tofanin e Arthur Lima 
