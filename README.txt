@@ -2,7 +2,9 @@
 - Visual Studio 2022
 - Workload .NET MAUI instalada
 - .NET 8 SDK
----------------------------------------------------------
+-------------------------------Bugs-------------------
+- Problema no DOT net 10. para ser corrigido
+
 
 Relatório da Pesquisa de Hotel/Pousada – Brotas/SP 
 
